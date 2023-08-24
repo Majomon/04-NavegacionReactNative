@@ -1,6 +1,6 @@
-import React from 'react';
-import {Text, View, Button} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
+import React from 'react';
+import {Button, Text, View, TouchableOpacity} from 'react-native';
 import {styles} from '../theme/appTheme';
 
 interface Props extends StackScreenProps<any, any> {}
@@ -13,10 +13,20 @@ export const Pagina1Screen = ({navigation}: Props) => {
         title="Ir a la página 2"
         onPress={() => navigation.navigate('Pagina2Screen')}
       />
-      <Button
+      {/*      <Button
         title="Ir a la persona"
         onPress={() => navigation.navigate('PersonaScreen')}
-      />
+      /> */}
+      <Text>Navegar con argumentos</Text>
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('PersonaScreen', {
+            id: 1,
+            name: 'Pedro',
+          })
+        }>
+        <Text>Pedro</Text>
+      </TouchableOpacity>
     </View>
   );
 };
