@@ -15,7 +15,11 @@ export const MenuLateral = () => {
   return (
     <Drawer.Navigator drawerContent={props => <MenuInterno {...props} />}>
       <Drawer.Screen name="StackNavigator" component={StackNavigator} />
-      <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
+      <Drawer.Screen
+        name="SettingsScreen"
+        options={{title: 'Settings'}}
+        component={SettingsScreen}
+      />
     </Drawer.Navigator>
   );
 };
