@@ -4,10 +4,10 @@ import {
   DrawerContentComponentProps,
   DrawerContentScrollView,
 } from '@react-navigation/drawer';
+import {Image, Text, TouchableOpacity, View} from 'react-native';
 import {SettingsScreen} from '../screens/SettingsScreen';
-import {StackNavigator} from './StackNavigator';
-import {View, Image} from 'react-native';
 import {styles} from '../theme/appTheme';
+import {StackNavigator} from './StackNavigator';
 
 const Drawer = createDrawerNavigator();
 
@@ -20,9 +20,10 @@ export const MenuLateral = () => {
   );
 };
 
-const MenuInterno = (props: DrawerContentComponentProps) => {
+const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
   return (
     <DrawerContentScrollView>
+      {/* Parte del avatar */}
       <View style={styles.avatarContainer}>
         <Image
           source={{
@@ -30,6 +31,20 @@ const MenuInterno = (props: DrawerContentComponentProps) => {
           }}
           style={styles.avatar}
         />
+      </View>
+      {/* Opciones de menu */}
+      <View style={styles.menuContainer}>
+        <TouchableOpacity
+          onPress={() => navigation.navigate('StackNavigator')}
+          style={styles.menuBtn}>
+          <Text style={styles.menuTexto}>Navegación</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => navigation.navigate('SettingsScreen')}
+          style={styles.menuBtn}>
+          <Text style={styles.menuTexto}>Ajustes</Text>
+        </TouchableOpacity>
       </View>
     </DrawerContentScrollView>
   );
