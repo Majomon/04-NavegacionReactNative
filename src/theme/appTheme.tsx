@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   title: {
-    fontSize: 25,
+    fontSize: 20,
     color: 'black',
     marginBottom: 10,
   },

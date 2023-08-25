@@ -17,7 +17,7 @@ export const Pagina1Screen = ({navigation}: Props) => {
         title="Ir a Persona"
         onPress={() => navigation.navigate('PersonaScreen')}
       /> */}
-      <Text style={styles.title}>Navegar con argumentos</Text>
+      <Text style={{...styles.title, marginVertical:20}}>Navegar con argumentos</Text>
       <View style={styles.containerPersona}>
         <TouchableOpacity
           style={{...styles.botonGrande, backgroundColor: '#5856D6'}}
