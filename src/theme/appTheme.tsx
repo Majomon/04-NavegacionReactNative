@@ -5,8 +5,12 @@ export const styles = StyleSheet.create({
     marginHorizontal: 20,
   },
   title: {
-    fontSize: 30,
+    fontSize: 25,
     color: 'black',
     marginBottom: 10,
+  },
+  textoPersonas: {
+    fontSize: 20,
+    color: 'red',
   },
 });
