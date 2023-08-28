@@ -22,6 +22,9 @@ export const Tabs = () => {
           borderTopWidth: 0,
           backgroundColor: '#FFFFFF',
         },
+        tabBarLabelStyle: {
+          fontSize: 15,
+        },
       }}>
       <Tab.Screen
         name="Tab1Screen"
