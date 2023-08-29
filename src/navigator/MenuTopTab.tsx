@@ -8,7 +8,17 @@ const Tab = createMaterialTopTabNavigator();
 
 export const MenuTopTab = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      sceneContainerStyle={{
+        backgroundColor: 'white',
+      }}
+      screenOptions={{
+        tabBarLabelStyle: {fontSize: 12},
+        tabBarIndicatorStyle: {backgroundColor: 'green'},
+        //tabBarPressColor: 'black', // Cambiar el color cuando se presiona el boton
+        //tabBarStyle: {backgroundColor: 'yellow'},
+        tabBarPressOpacity: 1,
+      }}>
       <Tab.Screen
         name="ChatScreen"
         options={{title: 'Chat'}}
