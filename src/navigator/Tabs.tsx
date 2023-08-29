@@ -1,10 +1,10 @@
-import React from 'react';
 import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
-import Tab1Screen from '../screens/Tab1Screen';
-import Tab2Screen from '../screens/Tab2Screen';
-import {StackNavigator} from './StackNavigator';
-import {colores} from '../theme/appTheme';
+import React from 'react';
 import {Text} from 'react-native';
+import Tab1Screen from '../screens/Tab1Screen';
+import {colores} from '../theme/appTheme';
+import {MenuTopTab} from './MenuTopTab';
+import {StackNavigator} from './StackNavigator';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -40,9 +40,9 @@ export const Tabs = () => {
         component={Tab1Screen}
       />
       <Tab.Screen
-        name="Tab2Screen"
+        name="MenuTopTab"
         options={{title: 'Tab2'}}
-        component={Tab2Screen}
+        component={MenuTopTab}
       />
       <Tab.Screen
         name="StackNavigator"
