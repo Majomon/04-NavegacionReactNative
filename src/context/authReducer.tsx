@@ -10,7 +10,7 @@ export const authReducer = (
 ): AuthState => {
   switch (action.type) {
     case 'signIn':
-      return {...state, isLoggedIn: true, userName: 'No hay usuario perro'};
+      return {...state, isLoggedIn: true, userName: 'No hay usuario.'};
 
     default:
       return state;
