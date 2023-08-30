@@ -67,7 +67,7 @@ const MenuInterno = ({navigation}: DrawerContentComponentProps) => {
           <Text>
             <Icon name="cog-outline" size={25} color="black" />;
           </Text>
-          <Text style={styles.menuTexto}>Navegación</Text>
+          <Text style={styles.menuTexto}>Configuración</Text>
         </TouchableOpacity>
       </View>
     </DrawerContentScrollView>
