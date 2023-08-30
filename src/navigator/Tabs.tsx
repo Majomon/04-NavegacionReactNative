@@ -21,7 +21,7 @@ export const Tabs = () => {
             case 'Tab1Screen':
               iconName = 'T1';
               break;
-            case 'Tab2Screen':
+            case 'MenuTopTab':
               iconName = 'T2';
               break;
             case 'StackNavigator':
