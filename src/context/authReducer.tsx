@@ -3,7 +3,8 @@ import {AuthState} from './AuthContext';
 type AuthAction =
   | {type: 'signIn'}
   | {type: 'changeFavIcon'; payload: string}
-  | {type: 'logout'};
+  | {type: 'logout'}
+  | {type: 'changeUserName'; payload: string};
 
 // Genera estado
 // Siempre debe devolver algo, por eso le pongo el AuthState
@@ -23,6 +24,8 @@ export const authReducer = (
         userName: undefined,
         favoriteIcon: undefined,
       };
+    case 'changeUserName':
+      return {...state, userName: action.payload};
     default:
       return state;
   }
