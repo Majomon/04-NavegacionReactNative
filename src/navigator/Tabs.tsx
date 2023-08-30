@@ -1,6 +1,6 @@
-import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
 import React from 'react';
-import {Text} from 'react-native';
+import {createMaterialBottomTabNavigator} from '@react-navigation/material-bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 import Tab1Screen from '../screens/Tab1Screen';
 import {colores} from '../theme/appTheme';
 import {MenuTopTab} from './MenuTopTab';
@@ -19,19 +19,19 @@ export const Tabs = () => {
 
           switch (route.name) {
             case 'Tab1Screen':
-              iconName = 'T1';
+              iconName = 'game-controller-outline';
               break;
             case 'MenuTopTab':
-              iconName = 'T2';
+              iconName = 'leaf-outline';
               break;
             case 'StackNavigator':
-              iconName = 'ST';
+              iconName = 'planet-outline';
               break;
             default:
               return;
           }
 
-          return <Text style={{color}}>{iconName}</Text>;
+          return <Icon name={iconName} size={25} color={color} />;
         },
       })}>
       <Tab.Screen

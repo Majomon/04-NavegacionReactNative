@@ -26,7 +26,7 @@ export const StackNavigator = () => {
           elevation: 0,
         },
         cardStyle: {
-          backgroundColor: 'white',
+          backgroundColor: 'green',
         },
       }}>
       <Stack.Screen
