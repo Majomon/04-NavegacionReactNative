@@ -1,5 +1,5 @@
-import React from 'react';
-import {createContext} from 'react';
+import React, {createContext, useReducer} from 'react';
+import {authReducer} from './authReducer';
 
 // Definir que información tendre aca
 export interface AuthState {
@@ -26,10 +26,11 @@ export const AuthContext = createContext({} as AuthContextProps);
 
 // Componente proveedor del estado
 export const AuthProvider = ({children}: any) => {
+  const [authState, dispatch] = useReducer(authReducer, authInicialState);
   return (
     <AuthContext.Provider
       value={{
-        authState: authInicialState,
+        authState,
         signIn: () => {},
       }}>
       {children}
